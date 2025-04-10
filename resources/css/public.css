@@ -1,0 +1,131 @@
+@import 'tailwindcss';
+@import '../../vendor/livewire/flux/dist/flux.css';
+
+@source '../views';
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../vendor/livewire/flux-pro/stubs/**/*.blade.php';
+@source '../../vendor/livewire/flux/stubs/**/*.blade.php';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+    --color-zinc-50: #fafafa;
+    --color-zinc-100: #f5f5f5;
+    --color-zinc-200: #e5e5e5;
+    --color-zinc-300: #d4d4d4;
+    --color-zinc-400: #a3a3a3;
+    --color-zinc-500: #737373;
+    --color-zinc-600: #525252;
+    --color-zinc-700: #404040;
+    --color-zinc-800: #262626;
+    --color-zinc-900: #171717;
+    --color-zinc-950: #0a0a0a;
+
+    --color-accent: var(--color-neutral-800);
+    --color-accent-content: var(--color-neutral-800);
+    --color-accent-foreground: var(--color-white);
+
+    --color-orange-300: #f4a261; /* Naranja más suave para texto */
+    --color-orange-500: #e76f51; /* Naranja más suave para fondos */
+}
+
+@layer base {
+    html, body {
+        @apply min-h-screen overflow-x-hidden;
+        background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+        color: #e2e8f0;
+    }
+
+    .glass {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    /* Contenedor responsivo para secciones */
+    .container-responsive {
+        @apply container mx-auto px-4 md:px-0;
+    }
+
+    /* Estilos para el carrusel */
+    .swiper {
+        @apply w-full h-full overflow-hidden;
+    }
+
+    .swiper-slide {
+        @apply w-full h-full;
+    }
+
+    .swiper-slide img {
+        @apply w-full h-full object-cover rounded-lg md:rounded-none;
+    }
+
+    /* Estilos para las flechas del carrusel */
+    .swiper-button-prev,
+    .swiper-button-next {
+        @apply text-white opacity-75 hover:opacity-100 transition-opacity duration-300;
+        --swiper-navigation-size: 30px; /* Tamaño de las flechas */
+    }
+
+    .swiper-button-prev {
+        @apply left-4;
+    }
+
+    .swiper-button-next {
+        @apply right-4;
+    }
+
+    /* Estilos para los puntos de paginación del carrusel */
+    .swiper-pagination-bullet {
+        @apply bg-white opacity-50;
+    }
+
+    .swiper-pagination-bullet-active {
+        @apply bg-orange-300 opacity-100;
+    }
+
+    /* Estilos para el menú hamburguesa */
+    #menu-toggle {
+        @apply p-2 rounded-full hover:bg-gray-700/50 transition-colors duration-200;
+    }
+
+    #menu {
+        @apply flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-6;
+    }
+
+    #menu a {
+        @apply w-full md:w-auto text-left;
+    }
+
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentColor);
+    }
+}
+
+@layer theme {
+    .dark {
+        --color-accent: var(--color-white);
+        --color-accent-content: var(--color-white);
+        --color-accent-foreground: var(--color-neutral-800);
+    }
+}
+
+[data-flux-field]:not(ui-radio, ui-checkbox) {
+    @apply grid gap-2;
+}
+
+[data-flux-label] {
+    @apply !mb-0 !leading-tight;
+}
+
+input:focus[data-flux-control],
+textarea:focus[data-flux-control],
+select:focus[data-flux-control] {
+    @apply outline-hidden ring-2 ring-accent ring-offset-2 ring-offset-accent-foreground;
+}
