@@ -143,14 +143,14 @@
 </div>
 
 <!-- Llamado a la acción (con márgenes laterales en móviles) -->
-<div class="container mx-auto py-16 px-4 md:px-0 text-center">
-    <div class="bg-gray-700 text-white p-12 rounded-lg shadow-2xl" data-aos="zoom-in">
-        <h2 class="text-4xl md:text-5xl font-bold mb-4 relative inline-block">
+<div class="container mx-auto py-12 px-4 md:px-0 text-center">
+    <div class="bg-gray-700 text-white p-6 sm:p-8 md:p-12 rounded-lg shadow-2xl max-w-3xl mx-auto" data-aos="zoom-in">
+        <h2 class="text-3xl sm:text-3xl md:text-5xl font-bold mb-4 relative inline-block truncate max-w-full">
             Únete a {{$keyword->word}}
             <span class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-orange-500 rounded"></span>
         </h2>
-        <p class="text-lg md:text-xl mb-6">Forma parte de la revolución agroindustrial y transforma el futuro del campo.</p>
-        <a href="{{ route('login') }}" class="bg-orange-500 text-white px-8 py-4 rounded-full font-semibold hover:bg-orange-600 transition duration-300">Comienza Ahora</a>
+        <p class="text-base sm:text-lg md:text-xl mb-6 max-w-md mx-auto">Forma parte de la revolución agroindustrial y transforma el futuro del campo.</p>
+        <a href="{{ route('login') }}" class="bg-orange-500 text-white px-6 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 rounded-full font-semibold hover:bg-orange-600 transition duration-300 inline-block">Comienza Ahora</a>
     </div>
 </div>
 
