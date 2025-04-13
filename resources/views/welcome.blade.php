@@ -56,7 +56,7 @@
 <div class="container mx-auto py-16 px-4 md:px-0">
     <div class="bg-orange-500 text-white p-12 rounded-lg shadow-2xl flex flex-col md:flex-row items-center" data-aos="fade-right">
         <div class="flex-1">
-            <h2 class="text-4xl md:text-5xl font-bold mb-4">Sistema Integrado de CEFAEMPRESA</h2>
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">Sistema Integrado de {{$keyword->word}}</h2>
             <p class="text-lg md:text-xl mb-6">Centro de Formación Agroindustrial "La Angostura"</p>
             <button onclick="openVideoModal()" class="bg-gray-800 text-white px-6 py-3 rounded-full flex items-center space-x-2 hover:bg-gray-700 transition duration-300">
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -122,51 +122,20 @@
         <span class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-32 h-1.5 bg-orange-500 rounded"></span>
     </h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-        <a href="" class="bg-gray-700 text-white p-8 rounded-xl shadow-2xl hover:bg-gray-600 transition duration-300 flex items-center transform hover:scale-105" data-aos="fade-up" data-aos-delay="100">
-            <div class="flex-1">
-                <h3 class="text-3xl font-semibold mb-3 text-gray-100">Gestión de Producción</h3>
-                <p class="text-gray-300 text-lg">Administra cultivos y procesos productivos en tiempo real.</p>
-            </div>
-            <div class="ml-6 text-orange-300 text-5xl flex-shrink-0">
-                <span class="material-icons" style="font-size: 70px">agriculture</span>
-            </div>
-        </a>
-        <a href="" class="bg-gray-700 text-white p-8 rounded-xl shadow-2xl hover:bg-gray-600 transition duration-300 flex items-center transform hover:scale-105" data-aos="fade-up" data-aos-delay="200">
-            <div class="flex-1">
-                <h3 class="text-3xl font-semibold mb-3 text-gray-100">Control de Inventarios</h3>
-                <p class="text-gray-300 text-lg">Monitorea insumos y productos con precisión.</p>
-            </div>
-            <div class="ml-6 text-orange-300 text-5xl flex-shrink-0">
-                <span class="material-icons" style="font-size: 70px">inventory</span>
-            </div>
-        </a>
-        <a href="" class="bg-gray-700 text-white p-8 rounded-xl shadow-2xl hover:bg-gray-600 transition duration-300 flex items-center transform hover:scale-105" data-aos="fade-up" data-aos-delay="300">
-            <div class="flex-1">
-                <h3 class="text-3xl font-semibold mb-3 text-gray-100">Logística y Distribución</h3>
-                <p class="text-gray-300 text-lg">Optimiza el transporte y seguimiento de pedidos.</p>
-            </div>
-            <div class="ml-6 text-orange-300 text-5xl flex-shrink-0">
-                <span class="material-icons" style="font-size: 70px">local_shipping</span>
-            </div>
-        </a>
-        <a href="" class="bg-gray-700 text-white p-8 rounded-xl shadow-2xl hover:bg-gray-600 transition duration-300 flex items-center transform hover:scale-105" data-aos="fade-up" data-aos-delay="400">
-            <div class="flex-1">
-                <h3 class="text-3xl font-semibold mb-3 text-gray-100">Formación Virtual</h3>
-                <p class="text-gray-300 text-lg">Accede a cursos y capacitaciones en línea.</p>
-            </div>
-            <div class="ml-6 text-orange-300 text-5xl flex-shrink-0">
-                <span class="material-icons" style="font-size: 70px">school</span>
-            </div>
-        </a>
-        <a href="" class="bg-gray-700 text-white p-8 rounded-xl shadow-2xl hover:bg-gray-600 transition duration-300 flex items-center transform hover:scale-105" data-aos="fade-up" data-aos-delay="500">
-            <div class="flex-1">
-                <h3 class="text-3xl font-semibold mb-3 text-gray-100">Reportes</h3>
-                <p class="text-gray-300 text-lg">Genera informes detallados del sistema.</p>
-            </div>
-            <div class="ml-6 text-orange-300 text-5xl flex-shrink-0">
-                <span class="material-icons" style="font-size: 70px">bar_chart</span>
-            </div>
-        </a>
+        @foreach ($apps as $app)
+            <a href="{{ $app->url }}" 
+               class="bg-gray-700 text-white p-8 rounded-xl shadow-2xl hover:bg-gray-600 transition duration-300 flex items-center transform hover:scale-105" 
+               data-aos="fade-up" 
+               data-aos-delay="{{ $loop->index * 100 + 100 }}">
+                <div class="flex-1">
+                    <h3 class="text-3xl font-semibold mb-3 text-gray-100">{{ $app->title }}</h3>
+                    <p class="text-gray-300 text-lg">{{ $app->description }}</p>
+                </div>
+                <div class="ml-6 text-orange-300 text-5xl flex-shrink-0">
+                    <i class="{{ $app->icon_class }}" style="font-size: 70px"></i>
+                </div>
+            </a>
+        @endforeach
     </div>
 </div>
 
@@ -178,11 +147,11 @@
     </h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div class="bg-gray-700 text-white p-8 rounded-lg shadow-xl" data-aos="fade-right">
-            <p class="text-lg italic mb-4">"CEFAEMPRESA transformó nuestra forma de trabajar en el campo. La formación y las herramientas son de primer nivel."</p>
+            <p class="text-lg italic mb-4">"{{$keyword->word}} transformó nuestra forma de trabajar en el campo. La formación y las herramientas son de primer nivel."</p>
             <p class="text-orange-300 font-semibold">— Juan Pérez, Productor</p>
         </div>
         <div class="bg-gray-700 text-white p-8 rounded-lg shadow-xl" data-aos="fade-left">
-            <p class="text-lg italic mb-4">"Gracias a CEFAEMPRESA, logramos optimizar nuestra logística y aumentar nuestra producción."</p>
+            <p class="text-lg italic mb-4">"Gracias a {{$keyword->word}}, logramos optimizar nuestra logística y aumentar nuestra producción."</p>
             <p class="text-orange-300 font-semibold">— María Gómez, Emprendedora</p>
         </div>
     </div>
@@ -192,7 +161,7 @@
 <div class="container mx-auto py-16 px-4 md:px-0 text-center">
     <div class="bg-gray-700 text-white p-12 rounded-lg shadow-2xl" data-aos="zoom-in">
         <h2 class="text-4xl md:text-5xl font-bold mb-4 relative inline-block">
-            Únete a CEFAEMPRESA
+            Únete a {{$keyword->word}}
             <span class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-orange-500 rounded"></span>
         </h2>
         <p class="text-lg md:text-xl mb-6">Forma parte de la revolución agroindustrial y transforma el futuro del campo.</p>
@@ -200,7 +169,6 @@
     </div>
 </div>
 
-@push('scripts')
 <script>
     function openVideoModal() {
         const modal = document.getElementById('videoModal');
@@ -223,5 +191,5 @@
         }
     });
 </script>
-@endpush
+
 @endsection
