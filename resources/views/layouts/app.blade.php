@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="CEFAEMPRESA - SENA Empresa: Gestión empresarial y formación agroindustrial en el Centro La Angostura">
     <title>{{$keyword->word}}</title>
+      <!-- Open Graph -->
+      <meta property="og:title" content="CEFAEMPRESA">
+      <meta property="og:description" content="Sistema Integrado de Control Empresarial y de Formación Agroindustrial del SENA La Angostura.">
+      <meta property="og:image" content="{{ asset('images/logoCEFAEMPRESA.png') }}">
+      <meta property="og:url" content="https://CEFAEMPRESA.com">
+      <meta property="og:type" content="https://CEFAEMPRESA.com">
+  
+      <!-- Twitter -->
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="SENA Empresa">
+      <meta name="twitter:description" content="Plataforma oficial de CEFAEMPRESA">
+      <meta name="twitter:image" content="{{ asset('images/sena-preview.jpg') }}">
     @vite(['resources/css/public.css', 'resources/js/app.js'])
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
