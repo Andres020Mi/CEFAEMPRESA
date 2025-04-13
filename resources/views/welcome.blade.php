@@ -116,6 +116,7 @@
 </div>
 
 <!-- Sección de Aplicaciones (con márgenes laterales en móviles) -->
+
 <div id="aplicaciones" class="container mx-auto py-20 px-4 md:px-0">
     <h2 class="text-5xl md:text-6xl font-extrabold text-center text-white mb-16 relative inline-block" data-aos="fade-up">
         Aplicaciones
@@ -124,36 +125,20 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         @foreach ($apps as $app)
             <a href="{{ $app->url }}" 
-               class="bg-gray-700 text-white p-8 rounded-xl shadow-2xl hover:bg-gray-600 transition duration-300 flex items-center transform hover:scale-105" 
+               class="bg-gray-700 text-white p-8 rounded-xl shadow-2xl hover:bg-gray-600 transition duration-300 flex flex-col md:flex-row md:items-center transform hover:scale-105" 
                data-aos="fade-up" 
                data-aos-delay="{{ $loop->index * 100 + 100 }}">
-                <div class="flex-1">
+                <!-- Ícono -->
+                <div class="flex justify-center text-orange-300 text-5xl flex-shrink-0 mb-4 md:mb-0 md:ml-6 order-1 md:order-2">
+                    <i class="{{ $app->icon_class }}" style="font-size: 60px"></i>
+                </div>
+                <!-- Título y descripción -->
+                <div class="flex-1 text-center md:text-left order-2 md:order-1">
                     <h3 class="text-3xl font-semibold mb-3 text-gray-100">{{ $app->title }}</h3>
                     <p class="text-gray-300 text-lg">{{ $app->description }}</p>
                 </div>
-                <div class="ml-6 text-orange-300 text-5xl flex-shrink-0">
-                    <i class="{{ $app->icon_class }}" style="font-size: 70px"></i>
-                </div>
             </a>
         @endforeach
-    </div>
-</div>
-
-<!-- Sección de Testimonios (con márgenes laterales en móviles) -->
-<div class="container mx-auto py-16 px-4 md:px-0">
-    <h2 class="text-4xl md:text-5xl font-bold text-center text-white mb-12 relative inline-block" data-aos="fade-up">
-        Lo que dicen de nosotros
-        <span class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-orange-500 rounded"></span>
-    </h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="bg-gray-700 text-white p-8 rounded-lg shadow-xl" data-aos="fade-right">
-            <p class="text-lg italic mb-4">"{{$keyword->word}} transformó nuestra forma de trabajar en el campo. La formación y las herramientas son de primer nivel."</p>
-            <p class="text-orange-300 font-semibold">— Juan Pérez, Productor</p>
-        </div>
-        <div class="bg-gray-700 text-white p-8 rounded-lg shadow-xl" data-aos="fade-left">
-            <p class="text-lg italic mb-4">"Gracias a {{$keyword->word}}, logramos optimizar nuestra logística y aumentar nuestra producción."</p>
-            <p class="text-orange-300 font-semibold">— María Gómez, Emprendedora</p>
-        </div>
     </div>
 </div>
 

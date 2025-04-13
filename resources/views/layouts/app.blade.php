@@ -26,11 +26,11 @@
     <!-- Navegación -->
     <nav class="glass p-4 shadow-lg fixed top-0 w-full z-50">
         <div class="container mx-auto flex justify-between items-center">
-            <!-- Logo -->
-            <div class="flex items-center space-x-2">
-                <img src="{{ asset('img/logoCEFAEMPRESA.png') }}" alt="Logo {{$keyword->word}}" class="w-12 h-12 object-contain">
-                <a href="/" class="text-3xl font-extrabold text-orange-300 tracking-tight">{{$keyword->word}}</a>
-            </div>
+         <!-- Logo -->
+<div class="flex items-center space-x-2">
+    <img src="{{ asset('img/logoCEFAEMPRESA.png') }}" alt="Logo {{$keyword->word}}" class="w-12 h-12 object-contain">
+    <a href="/" class="text-xl sm:text-xl md:text-3xl font-extrabold text-orange-300 tracking-tight">{{$keyword->word}}</a>
+</div>
 
             <!-- Botón hamburguesa -->
             <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
