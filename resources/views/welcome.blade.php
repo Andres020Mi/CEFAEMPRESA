@@ -186,9 +186,7 @@
                     CEFAEMPRESA
                     <span class="absolute -bottom-3 left-1/2 md:left-0 transform -translate-x-1/2 md:transform-none w-32 h-1.5 bg-orange-500 rounded"></span>
                 </h2>
-                <p class="text-gray-300 text-lg md:text-xl leading-relaxed p-4">
-                    Es el espacio ofrecido para formar profesionales integrales con capacidad de análisis y toma dediciones en el entorno empresarial, mediante la innovación e investigación.
-                </p>
+              
                 <!-- Accordion (Desplegables) -->
                 <div class="space-y-4">
                     <!-- Desplegable 1 -->
@@ -210,7 +208,7 @@
                     <div class="accordion-item">
                         <input type="radio" name="accordion" id="accordion2" class="hidden peer">
                         <label for="accordion2" class="flex justify-between items-center bg-gray-700 rounded-lg p-4 cursor-pointer text-white hover:bg-gray-600 transition duration-300">
-                            <span class="text-lg font-semibold"><span style="color: orange; padding: 0 10px 0 0"> 02</span>Msión</span>
+                            <span class="text-lg font-semibold"><span style="color: orange; padding: 0 10px 0 0"> 02</span>Misión</span>
                             <svg class="w-6 h-6 transform transition-transform peer-checked:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                             </svg>
@@ -225,7 +223,7 @@
                     <div class="accordion-item">
                         <input type="radio" name="accordion" id="accordion3" class="hidden peer">
                         <label for="accordion3" class="flex justify-between items-center bg-gray-700 rounded-lg p-4 cursor-pointer text-white hover:bg-gray-600 transition duration-300">
-                            <span class="text-lg font-semibold"><span style="color: orange; padding: 0 10px 0 0"> 03</span>visión</span>
+                            <span class="text-lg font-semibold"><span style="color: orange; padding: 0 10px 0 0"> 03</span>Visión</span>
                             <svg class="w-6 h-6 transform transition-transform peer-checked:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                             </svg>

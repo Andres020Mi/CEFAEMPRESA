@@ -132,9 +132,12 @@
             </div>
             <div>
                 <h3 class="text-xl font-bold text-orange-300 mb-4">Contacto</h3>
-                <p class="text-gray-400">Centro La Angostura, Campoalegre, Huila, Colombia</p>
+                <p class="text-gray-400 " >Centro La Angostura, Campoalegre, Huila, Colombia</p>
                 <p class="text-gray-400">Email: gerentesenaempresa2023@gmail.com</p>
-                <p class="text-gray-400">Teléfono: +57 000 000 000</p>
+                <p class="text-gray-400 pt-2">Teléfono: +57 320 465 9454</p>
+                <p class="text-gray-400 pt-2">Teléfono: +57 312 482 3017</p>
+                <p class="text-gray-400 pt-2">Teléfono: +57 312 3500928</p>
+                
             </div>
         </div>
         <div class="text-center mt-8 text-sm text-gray-500 border-t border-gray-800 pt-4">
