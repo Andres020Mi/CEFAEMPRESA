@@ -10,7 +10,7 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <div class="relative h-full w-full">
-                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2073&auto=format&fit=crop" alt="Slide 1" class="w-full h-full object-cover rounded-lg md:rounded-none">
+                    <img src="https://media.istockphoto.com/id/1468465858/photo/agriculture-technology-farmer-woman-holding-tablet-or-tablet-technology-to-research-about.jpg?s=1024x1024&w=is&k=20&c=uC2_o5T9SPVYWNIWyu1l1u_WTMqIJVvrM_RshAcW8Fo=" alt="Slide 1" class="w-full h-full object-cover rounded-lg md:rounded-none">
                     <div class="absolute inset-0 bg-gradient-to-b from-black/70 to-transparent flex items-center justify-center">
                         <div class="text-center text-white" data-aos="fade-up">
                             <h1 class="text-5xl md:text-7xl font-extrabold mb-4">Innovación Agroindustrial</h1>
@@ -22,7 +22,7 @@
             </div>
             <div class="swiper-slide">
                 <div class="relative h-full w-full">
-                    <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop" alt="Slide 2" class="w-full h-full object-cover rounded-lg md:rounded-none">
+                    <img src="https://media.istockphoto.com/id/1342229204/photo/a-lake-in-the-shape-of-a-recycling-sign-in-the-middle-of-untouched-nature-an-ecological.jpg?s=612x612&w=0&k=20&c=AENL8ZdXCJQN_q0hxCYEG1LxoOckfCezV8W206WB3k4=" alt="Slide 2" class="w-full h-full object-cover rounded-lg md:rounded-none">
                     <div class="absolute inset-0 bg-gradient-to-b from-black/70 to-transparent flex items-center justify-center">
                         <div class="text-center text-white" data-aos="fade-up">
                             <h1 class="text-5xl md:text-7xl font-extrabold mb-4">Producción Sostenible</h1>
@@ -31,10 +31,11 @@
                         </div>
                     </div>
                 </div>
+                
             </div>
             <div class="swiper-slide">
                 <div class="relative h-full w-full">
-                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2070&auto=format&fit=crop" alt="Slide 3" class="w-full h-full object-cover rounded-lg md:rounded-none">
+                    <img src="{{asset('img/sena empresa.jpg')}}" alt="Slide 3" class="w-full h-full object-cover rounded-lg md:rounded-none">
                     <div class="absolute inset-0 bg-gradient-to-b from-black/70 to-transparent flex items-center justify-center">
                         <div class="text-center text-white" data-aos="fade-up">
                             <h1 class="text-5xl md:text-7xl font-extrabold mb-4">Formación de Calidad</h1>
@@ -83,6 +84,157 @@
         </video>
     </div>
 </div>
+
+<!-- Sección de Productos Carousel (con márgenes laterales ajustados y diseño mejorado) -->
+<div id="productos" class="container mx-auto py-20 px-4 md:px-8">
+    <div class="bg-gray-700 bg-opacity-50 backdrop-blur-sm rounded-xl shadow-xl p-8 md:p-12 mx-2 md:mx-8 lg:mx-16">
+        <h2 class="text-5xl md:text-6xl font-extrabold text-center text-white mb-12 relative inline-block" data-aos="fade-up">
+            Nuestros Productos
+            <span class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-32 h-1.5 bg-orange-500 rounded"></span>
+        </h2>
+        <!-- Contenedor de las 4 filas de productos -->
+        <div class="space-y-8" data-aos="fade-up" data-aos-delay="100">
+            <!-- Fila 1 -->
+            <div class="overflow-hidden">
+                <div class="flex animate-marquee whitespace-nowrap" style="--marquee-speed: 30s;">
+                    <template id="productTemplate1">
+                        <div class="flex-shrink-0 w-48 md:w-64 mx-3 md:mx-4">
+                            <img src="" alt="" class="w-full h-40 md:h-48 object-cover rounded-lg shadow-md product-image">
+                            <p class="text-white text-base md:text-lg font-semibold text-center mt-2 product-name capitalize"></p>
+                        </div>
+                    </template>
+                    <div id="marqueeContainer1" class="flex"></div>
+                </div>
+            </div>
+            <!-- Fila 2 -->
+            <div class="overflow-hidden">
+                <div class="flex animate-marquee-reverse whitespace-nowrap" style="--marquee-speed: 28s;">
+                    <template id="productTemplate2">
+                        <div class="flex-shrink-0 w-48 md:w-64 mx-3 md:mx-4">
+                            <img src="" alt="" class="w-full h-40 md:h-48 object-cover rounded-lg shadow-md product-image">
+                            <p class="text-white text-base md:text-lg font-semibold text-center mt-2 product-name capitalize"></p>
+                        </div>
+                    </template>
+                    <div id="marqueeContainer2" class="flex"></div>
+                </div>
+            </div>
+            <!-- Fila 3 -->
+            <div class="overflow-hidden">
+                <div class="flex animate-marquee whitespace-nowrap" style="--marquee-speed: 32s;">
+                    <template id="productTemplate3">
+                        <div class="flex-shrink-0 w-48 md:w-64 mx-3 md:mx-4">
+                            <img src="" alt="" class="w-full h-40 md:h-48 object-cover rounded-lg shadow-md product-image">
+                            <p class="text-white text-base md:text-lg font-semibold text-center mt-2 product-name capitalize"></p>
+                        </div>
+                    </template>
+                    <div id="marqueeContainer3" class="flex"></div>
+                </div>
+            </div>
+            <!-- Fila 4 -->
+            <div class="overflow-hidden">
+                <div class="flex animate-marquee-reverse whitespace-nowrap" style="--marquee-speed: 26s;">
+                    <template id="productTemplate4">
+                        <div class="flex-shrink-0 w-48 md:w-64 mx-3 md:mx-4">
+                            <img src="" alt="" class="w-full h-40 md:h-48 object-cover rounded-lg shadow-md product-image">
+                            <p class="text-white text-base md:text-lg font-semibold text-center mt-2 product-name capitalize"></p>
+                        </div>
+                    </template>
+                    <div id="marqueeContainer4" class="flex"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Estilos para la animación de marquee -->
+<style>
+    /* Animación de izquierda a derecha */
+    .animate-marquee {
+        animation: marquee var(--marquee-speed) linear infinite;
+    }
+
+    @keyframes marquee {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    /* Animación de derecha a izquierda para alternar dirección */
+    .animate-marquee-reverse {
+        animation: marquee-reverse var(--marquee-speed) linear infinite;
+    }
+
+    @keyframes marquee-reverse {
+        0% {
+            transform: translateX(-50%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    /* Pausar la animación al pasar el mouse */
+    .animate-marquee:hover,
+    .animate-marquee-reverse:hover {
+        animation-play-state: paused;
+    }
+
+    /* Ajustes para mejor diseño */
+    .container {
+        max-width: 100%;
+    }
+
+    @media (min-width: 1024px) {
+        .container {
+            max-width: 90%;
+        }
+    }
+</style>
+
+<!-- JavaScript para generar y duplicar imágenes dinámicamente -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const products = [
+            { name: "aguacate", image: "{{ asset('img/pruebas/productos/aguacate.jpeg') }}" },
+            { name: "huevo", image: "{{ asset('img/pruebas/productos/huevo.jpeg') }}" },
+            { name: "leche", image: "{{ asset('img/pruebas/productos/leche.jpeg') }}" },
+            { name: "lechuga", image: "{{ asset('img/pruebas/productos/lechuga.png') }}" },
+            { name: "mango", image: "{{ asset('img/pruebas/productos/mango.jpeg') }}" },
+            { name: "miel", image: "{{ asset('img/pruebas/productos/miel.jpeg') }}" },
+            { name: "pan", image: "{{ asset('img/pruebas/productos/pan.jpeg') }}" },
+            { name: "queso", image: "{{ asset('img/pruebas/productos/queso.jpeg') }}" },
+            { name: "yogur", image: "{{ asset('img/pruebas/productos/yogur.jpeg') }}" },
+        ];
+
+        // Función para llenar cada fila
+        const fillMarquee = (containerId, templateId) => {
+            const marqueeContainer = document.getElementById(containerId);
+            const template = document.getElementById(templateId);
+
+            // Duplicar las imágenes 4 veces por fila para un efecto fluido
+            for (let i = 0; i < 4; i++) {
+                products.forEach(product => {
+                    const clone = template.content.cloneNode(true);
+                    const img = clone.querySelector('.product-image');
+                    const name = clone.querySelector('.product-name');
+                    img.src = product.image;
+                    img.alt = product.name;
+                    name.textContent = product.name;
+                    marqueeContainer.appendChild(clone);
+                });
+            }
+        };
+
+        // Llenar las 4 filas
+        fillMarquee('marqueeContainer1', 'productTemplate1');
+        fillMarquee('marqueeContainer2', 'productTemplate2');
+        fillMarquee('marqueeContainer3', 'productTemplate3');
+        fillMarquee('marqueeContainer4', 'productTemplate4');
+    });
+</script>
 
 <!-- Sección de servicios (con márgenes laterales en móviles) -->
 <div id="servicios" class="container mx-auto py-16 px-4 md:px-0">
@@ -141,6 +293,175 @@
         @endforeach
     </div>
 </div>
+
+
+<!-- Sección de CEFAEMPRESA (con márgenes laterales en móviles y separación adicional) -->
+<div id="cefaempresa" class="container mx-auto py-20 px-4 md:px-8">
+    <div class="bg-gray-800 bg-opacity-80 backdrop-blur-md rounded-xl shadow-2xl p-10 md:p-12 mx-4 md:mx-16">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+            <!-- Título y descripción a la izquierda -->
+            <div class="flex-1 text-center md:text-left" data-aos="fade-right">
+                <h2 class="text-5xl md:text-6xl font-extrabold text-white mb-6 relative inline-block">
+                    CEFAEMPRESA
+                    <span class="absolute -bottom-3 left-1/2 md:left-0 transform -translate-x-1/2 md:transform-none w-32 h-1.5 bg-orange-500 rounded"></span>
+                </h2>
+                <p class="text-gray-300 text-lg md:text-xl leading-relaxed p-4">
+                    CEFAEMPRESA, una iniciativa del Centro de Formación Agroindustrial "La Angostura", se dedica a impulsar la innovación y el desarrollo sostenible en el sector agroindustrial. Nuestro objetivo es conectar la formación técnica de alta calidad con tecnologías de punta y el espíritu emprendedor, creando soluciones que transformen el campo.
+                </p>
+                <p class="text-gray-300 text-lg md:text-xl leading-relaxed p-4">
+                    A través de programas de capacitación, asesorías especializadas y proyectos colaborativos, apoyamos a productores y emprendedores para que adopten prácticas sostenibles, optimicen sus procesos y generen un impacto positivo en sus comunidades y el medio ambiente.
+                </p>
+                
+            </div>
+            <!-- Logo a la derecha -->
+            <div class="flex-1 flex justify-center md:justify-end" data-aos="fade-left">
+                <img src="{{ asset('img/logoCEFAEMPRESA.png') }}" alt="CEFAEMPRESA Logo" class="w-full max-w-sm md:max-w-md">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Sección de CEFAEMPRESA (con márgenes laterales en móviles y separación adicional) -->
+<div id="cefaempresa" class="container mx-auto py-20 px-4 md:px-8">
+    <div class="bg-gray-800 bg-opacity-80 backdrop-blur-md rounded-xl shadow-2xl p-10 md:p-12 mx-4 md:mx-16">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+            <!-- Logo a la izquierda -->
+            <div class="flex-1 flex justify-center md:justify-start" data-aos="fade-right">
+                <img src="{{ asset('img/logoCEFAEMPRESA.png') }}" alt="CEFAEMPRESA Logo" class="w-full max-w-sm md:max-w-md">
+            </div>
+            <!-- Título y desplegables a la derecha -->
+            <div class="flex-1 text-center md:text-left" data-aos="fade-left">
+                <h2 class="text-5xl md:text-6xl font-extrabold text-white mb-6 relative inline-block">
+                    CEFAEMPRESA
+                    <span class="absolute -bottom-3 left-1/2 md:left-0 transform -translate-x-1/2 md:transform-none w-32 h-1.5 bg-orange-500 rounded"></span>
+                </h2>
+                <p class="text-gray-300 text-lg md:text-xl leading-relaxed p-4">
+                    Es el espacio ofrecido para formar profesionales integrales con capacidad de análisis y toma dediciones en el entorno empresarial, mediante la innovación e investigación.
+                </p>
+                <!-- Accordion (Desplegables) -->
+                <div class="space-y-4">
+                    <!-- Desplegable 1 -->
+                    <div class="accordion-item">
+                        <input type="radio" name="accordion" id="accordion1" class="hidden peer">
+                        <label for="accordion1" class="flex justify-between items-center bg-gray-700 rounded-lg p-4 cursor-pointer text-white hover:bg-gray-600 transition duration-300">
+                            <span class="text-lg font-semibold"><span style="color: orange; padding: 0 10px 0 0"> 01</span> ¿Que es?</span>
+                            <svg class="w-6 h-6 transform transition-transform peer-checked:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </label>
+                        <div class="max-h-0 overflow-hidden peer-checked:max-h-96 transition-all duration-500">
+                            <p class="text-gray-300 text-lg leading-relaxed p-4">
+                                CEFAEMPRESA es un modelo didáctico de empresa, que busca impartir y trasmitir a el aprendiz los conocimientos administrativos, productivos, técnicos, financieros, ambiéntales, y de comercialización adquiridos en el proceso de formación por medio del manejo real de una empresa en las diferentes áreas y unidades productivas.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Desplegable 2 -->
+                    <div class="accordion-item">
+                        <input type="radio" name="accordion" id="accordion2" class="hidden peer">
+                        <label for="accordion2" class="flex justify-between items-center bg-gray-700 rounded-lg p-4 cursor-pointer text-white hover:bg-gray-600 transition duration-300">
+                            <span class="text-lg font-semibold"><span style="color: orange; padding: 0 10px 0 0"> 02</span>Msión</span>
+                            <svg class="w-6 h-6 transform transition-transform peer-checked:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </label>
+                        <div class="max-h-0 overflow-hidden peer-checked:max-h-96 transition-all duration-500">
+                            <p class="text-gray-300 text-lg leading-relaxed p-4">
+                                Fortalecer la formación por competencias desde las estrategias de formación por proyectos, impulsando el emprendimiento, la innovación, la investigación y el trabajo colaborativo, para tener un ambiente de aprendizaje integral en que los aprendices a través del aprender haciendo y el hacer transformado se integren con diferentes especialidades que lo lleven a adquirir todas las competencias adquiridas para la gestión empresarial de proyectos.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Desplegable 3 -->
+                    <div class="accordion-item">
+                        <input type="radio" name="accordion" id="accordion3" class="hidden peer">
+                        <label for="accordion3" class="flex justify-between items-center bg-gray-700 rounded-lg p-4 cursor-pointer text-white hover:bg-gray-600 transition duration-300">
+                            <span class="text-lg font-semibold"><span style="color: orange; padding: 0 10px 0 0"> 03</span>visión</span>
+                            <svg class="w-6 h-6 transform transition-transform peer-checked:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </label>
+                        <div class="max-h-0 overflow-hidden peer-checked:max-h-96 transition-all duration-500">
+                            <p class="text-gray-300 text-lg leading-relaxed p-4">
+                                Un modelo empresarial organizado mostrando resultados con proyectos formativos-productivos que lleven al aprendiz, al empresario y a cualquier ciudadano a implementar en su entorno proyectos empresariales enfocados al desarrollo de la región (nación, departamento, municipio) implementando tecnologías innovadoras que conduzcan a un desarrollo sostenible.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Desplegable 4 -->
+                    <div class="accordion-item">
+                        <input type="radio" name="accordion" id="accordion4" class="hidden peer">
+                        <label for="accordion4" class="flex justify-between items-center bg-gray-700 rounded-lg p-4 cursor-pointer text-white hover:bg-gray-600 transition duration-300">
+                            <span class="text-lg font-semibold"><span style="color: orange; padding: 0 10px 0 0"> 04</span>Modelo CEFAEMPRESA</span>
+                            <svg class="w-6 h-6 transform transition-transform peer-checked:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </label>
+                        <div class="max-h-0 overflow-hidden peer-checked:max-h-96 transition-all duration-500">
+                            <p class="text-gray-300 text-lg leading-relaxed p-4">
+                                La estrategia Sena Empresa consta de Resultados de Aprendizaje en: Desarrollo de labores administrativas y de mercadeo en la empresa agropecuaria o agroindustrial. Operación del sistema productivo de tipo agropecuario o agroindustrial. Competencias comportamentales.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Sección de Lo Que Ofrecemos (con márgenes laterales en móviles y separación adicional) -->
+<div id="ofrecemos" class="container mx-auto py-20 px-4 md:px-8">
+    <div class="bg-gray-800 bg-opacity-80 backdrop-blur-md rounded-xl shadow-2xl p-10 md:p-12 mx-4 md:mx-16">
+        <h2 class="text-5xl md:text-6xl font-extrabold text-center text-white mb-12 relative inline-block" data-aos="fade-up">
+            Impulsamos
+            <span class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-32 h-1.5 bg-orange-500 rounded"></span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Líder -->
+            <div class="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="100">
+                <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Líder" class="w-full h-48 object-cover rounded-lg mb-4">
+                <h3 class="text-2xl font-semibold text-white mb-2">Líder</h3>
+                <p class="text-gray-300">Reconociendo al Líder del Mes</p>
+            </div>
+            <!-- Mejorando -->
+            <div class="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="200">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Mejorando" class="w-full h-48 object-cover rounded-lg mb-4">
+                <h3 class="text-2xl font-semibold text-white mb-2">Mejorando</h3>
+                <p class="text-gray-300">Mejorando Continuamente</p>
+            </div>
+            <!-- Ideas -->
+            <div class="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="300">
+                <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Ideas" class="w-full h-48 object-cover rounded-lg mb-4">
+                <h3 class="text-2xl font-semibold text-white mb-2">Ideas</h3>
+                <p class="text-gray-300">Generando Ideas Innovadoras</p>
+            </div>
+            <!-- Gestión -->
+            <div class="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="400">
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Gestión" class="w-full h-48 object-cover rounded-lg mb-4">
+                <h3 class="text-2xl font-semibold text-white mb-2">Gestión</h3>
+                <p class="text-gray-300">Gestión Eficiente de Resultados</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Sección de Ubicación (con márgenes laterales en móviles y separación adicional) -->
+<section id="ubicacion" class="py-20 px-4 md:px-8">
+    <div class="container mx-auto">
+        <div class="bg-gray-800 bg-opacity-80 backdrop-blur-md rounded-xl shadow-2xl p-10 md:p-12 mx-4 md:mx-16">
+            <h2 class="text-5xl md:text-6xl font-extrabold text-center text-white mb-12 relative inline-block" data-aos="fade-up">
+                Ubicación
+                <span class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-32 h-1.5 bg-orange-500 rounded"></span>
+            </h2>
+            <p class="text-gray-300 text-lg md:text-xl text-center mb-10 leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+                Estamos ubicados en el corazón del Huila, en el Centro de Formación Agroindustrial "La Angostura". Un lugar estratégico para la formación y la innovación agroindustrial, rodeado de paisajes que inspiran el desarrollo sostenible y la conexión con la naturaleza.
+            </p>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8" data-aos="fade-up" data-aos-delay="200">
+                <iframe class="w-full h-96 rounded-xl shadow-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.671289133705!2d-75.36400982524968!3d2.612566456217183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3b3f4b1c54ddc5%3A0x6a0d5a458d5d190d!2sCentro%20de%20Formaci%C3%B3n%20Agroindustrial%20La%20Angostura!5e0!3m2!1ses!2sco!4v1740859753628!5m2!1ses!2sco" allowfullscreen loading="lazy"></iframe>
+                <img src="{{ asset('img/plano.png') }}" alt="Mapa" class="w-full h-96 object-cover rounded-xl shadow-lg">
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- Llamado a la acción (con márgenes laterales en móviles) -->
 <div class="container mx-auto py-12 px-4 md:px-0 text-center">

@@ -27,7 +27,7 @@ return new class extends Migration
                'Pasaporte',
                'Documento nacional de identidad',
                'Registro civil'
-           ])->comment('Tipo de documento de identificación (por ejemplo, Cédula de ciudadanía, Pasaporte)');
+           ])->nullable()->comment('Tipo de documento de identificación (por ejemplo, Cédula de ciudadanía, Pasaporte)');
 
            // Número de documento: Número único asociado al documento de identidad
            $table->unsignedBigInteger('document_number')->nullable()->unique()->comment('Número único del documento de identificación');

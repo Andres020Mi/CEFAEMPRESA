@@ -54,8 +54,8 @@
                     <!-- Dropdown para usuario autenticado -->
                     <div class="relative ml-auto md:ml-8">
                         <button id="user-menu-toggle" class="flex items-center space-x-2 text-lg font-semibold text-white hover:text-orange-300 transition duration-300 py-2 md:py-0 focus:outline-none">
-                            <i class="fas fa-user-circle text-orange-300 text-2xl"></i>
                             <span>{{ Auth::user()->name }}</span>
+                            <i class="fas fa-user-circle text-orange-300 text-2xl"></i>
                         </button>
                         <!-- Menú desplegable -->
                         <div id="user-menu" class="hidden absolute right-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg z-50">
