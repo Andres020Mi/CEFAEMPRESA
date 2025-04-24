@@ -1,27 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CEFAEMPRESA - SENA Empresa: Gestión empresarial y formación agroindustrial en el Centro La Angostura">
-    <title>{{$keyword->word}}</title>
-      <!-- Open Graph -->
-      <meta property="og:title" content="CEFAEMPRESA">
-      <meta property="og:description" content="Sistema Integrado de Control Empresarial y de Formación Agroindustrial del SENA La Angostura.">
-      <meta property="og:image" content="{{ asset('images/logoCEFAEMPRESA.png') }}">
-      <meta property="og:url" content="https://CEFAEMPRESA.com">
-      <meta property="og:type" content="https://CEFAEMPRESA.com">
-  
-      <!-- Twitter -->
-      <meta name="twitter:card" content="summary_large_image">
-      <meta name="twitter:title" content="SENA Empresa">
-      <meta name="twitter:description" content="Plataforma oficial de CEFAEMPRESA">
-      <meta name="twitter:image" content="{{ asset('images/sena-preview.jpg') }}">
-    @vite(['resources/css/public.css', 'resources/js/app.js'])
-    <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" href="{{ asset('img/logoCEFAEMPRESA.png') }}" type="image/x-icon">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Improved Meta Description for better click-through rates -->
+        <meta name="description" content="CEFAEMPRESA - Sistema Integrado de Gestión Empresarial y Formación Agroindustrial en el Centro La Angostura, SENA. Explora nuestros servicios y productos sostenibles.">
+        <!-- Keywords for SEO (optional, but can help with some search engines) -->
+        <meta name="keywords" content="CEFAEMPRESA, SENA Empresa, agroindustrial, formación, gestión empresarial, Centro La Angostura, productos sostenibles, Huila">
+        <!-- Robots Meta Tag to ensure indexing -->
+        <meta name="robots" content="index, follow">
+        <!-- Page Title with keyword optimization -->
+        <title>{{$keyword->word}} | CEFAEMPRESA - Centro de Formación Agroindustrial La Angostura</title>
+        <!-- Canonical URL to avoid duplicate content issues -->
+        <link rel="canonical" href="https://cefaempresa.com">
+        <!-- Favicon -->
+        <link rel="icon" href="{{ asset('img/logoCEFAEMPRESA.png') }}" type="image/png">
+        <!-- Open Graph Tags (corrected and optimized) -->
+        <meta property="og:title" content="{{$keyword->word}} | CEFAEMPRESA - Formación Agroindustrial">
+        <meta property="og:description" content="Sistema Integrado de Control Empresarial y Formación Agroindustrial del SENA La Angostura. Conoce nuestros servicios y productos sostenibles.">
+        <meta property="og:image" content="{{ asset('img/logoCEFAEMPRESA.png') }}">
+        <meta property="og:url" content="https://cefaempresa.com">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="CEFAEMPRESA">
+        <!-- Twitter Card Tags (corrected and optimized) -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="{{$keyword->word}} | CEFAEMPRESA - SENA Empresa">
+        <meta name="twitter:description" content="Plataforma oficial de CEFAEMPRESA - Gestión y formación agroindustrial en el Centro La Angostura.">
+        <meta name="twitter:image" content="{{ asset('img/logoCEFAEMPRESA.png') }}">
+        <!-- Structured Data (Schema.org) for better indexing -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "CEFAEMPRESA",
+            "url": "https://cefaempresa.com",
+            "logo": "{{ asset('img/logoCEFAEMPRESA.png') }}",
+            "description": "Sistema Integrado de Gestión Empresarial y Formación Agroindustrial en el Centro La Angostura, SENA.",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Huila",
+                "addressCountry": "CO"
+            },
+            "sameAs": [
+                "https://twitter.com/cefaempresa",
+                "https://facebook.com/cefaempresa"
+            ]
+        }
+        </script>
+        <!-- Preload important assets for faster loading -->
+        <link rel="preload" href="{{ asset('img/logoCEFAEMPRESA.png') }}" as="image">
+        <!-- Vite for CSS and JS -->
+        @vite(['resources/css/public.css', 'resources/js/app.js'])
+        <!-- Font Awesome CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
 <body class="font-sans antialiased min-h-screen overflow-x-hidden">
     <!-- Navegación -->
     <nav class="glass p-4 shadow-lg fixed top-0 w-full z-50">
