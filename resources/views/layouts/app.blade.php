@@ -113,37 +113,68 @@
     <main class="pt-16 min-h-screen w-full">
         @yield('content')
     </main>
-
-    <!-- Pie de página -->
-    <footer class="bg-gray-900 text-white p-8 mt-16">
-        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-                <h3 class="text-xl font-bold text-orange-300 mb-4">{{$keyword->word}}</h3>
-                <p class="text-gray-400">Sistema Integrado de Control Empresarial y de Formación Agroindustrial del SENA La Angostura.</p>
-            </div>
-            <div>
-                <h3 class="text-xl font-bold text-orange-300 mb-4">Enlaces Rápidos</h3>
-                <ul class="space-y-2">
-                    <li><a href="#" class="text-gray-400 hover:text-orange-300 transition duration-300">SofíaPlus</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-orange-300 transition duration-300">Territorium</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-orange-300 transition duration-300">Sistema de Bibliotecas</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-orange-300 transition duration-300">Agencia Pública de Empleo</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="text-xl font-bold text-orange-300 mb-4">Contacto</h3>
-                <p class="text-gray-400 " >Centro La Angostura, Campoalegre, Huila, Colombia</p>
-                <p class="text-gray-400">Email: gerentesenaempresa2023@gmail.com</p>
-                <p class="text-gray-400 pt-2">Teléfono: +57 320 465 9454</p>
-                <p class="text-gray-400 pt-2">Teléfono: +57 312 482 3017</p>
-                <p class="text-gray-400 pt-2">Teléfono: +57 312 3500928</p>
-                
+<!-- Pie de página -->
+<footer class="bg-gray-900 text-white p-8 mt-16">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- Sección de CEFAEMPRESA -->
+        <div>
+            <h3 class="text-xl font-bold text-orange-300 mb-4">{{$keyword->word}}</h3>
+            <p class="text-gray-400">Sistema Integrado de Control Empresarial y de Formación Agroindustrial del SENA La Angostura.</p>
+        </div>
+        <!-- Sección de Enlaces Rápidos -->
+        <div>
+            <h3 class="text-xl font-bold text-orange-300 mb-4">Enlaces Rápidos</h3>
+            <ul class="space-y-2">
+                <li><a href="#" class="text-gray-400 hover:text-orange-300 transition duration-300">SofíaPlus</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-orange-300 transition duration-300">Territorium</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-orange-300 transition duration-300">Sistema de Bibliotecas</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-orange-300 transition duration-300">Agencia Pública de Empleo</a></li>
+            </ul>
+        </div>
+        <!-- Sección de Contacto -->
+        <div>
+            <h3 class="text-xl font-bold text-orange-300 mb-4">Contacto</h3>
+            <p class="text-gray-400">Centro La Angostura, Campoalegre, Huila, Colombia</p>
+            <p class="text-gray-400 pt-2 flex items-center gap-2">
+                <i class="fas fa-envelope text-orange-300"></i>
+                <a href="mailto:gerentesenaempresa2023@gmail.com" class="text-gray-400 hover:text-orange-300 transition duration-300 break-all">gerentesenaempresa2023@gmail.com</a>
+            </p>
+            <p class="text-gray-400 pt-2 flex items-center gap-2">
+                <i class="fas fa-phone text-orange-300"></i>
+                <span>Teléfono: +57 320 465 9454</span>
+            </p>
+            <p class="text-gray-400 pt-2 flex items-center gap-2">
+                <i class="fas fa-phone text-orange-300"></i>
+                <span>Teléfono: +57 312 482 3017</span>
+            </p>
+            <p class="text-gray-400 pt-2 flex items-center gap-2">
+                <i class="fas fa-phone text-orange-300"></i>
+                <span>Teléfono: +57 312 3500928</span>
+            </p>
+        </div>
+        <!-- Sección de Redes Sociales -->
+        <div>
+            <h3 class="text-xl font-bold text-orange-300 mb-4">Síguenos</h3>
+            <div class="flex space-x-4">
+                <a href="https://www.youtube.com/@gerenciasenaempresa9888" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-orange-300 transition duration-300">
+                    <i class="fab fa-youtube text-2xl"></i>
+                </a>
+                <a href="https://instagram.com/sena.empresa?igshid=MzNlNGNkZWQ4Mg==" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-orange-300 transition duration-300">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </a>
+                <a href="[ENLACE_TIKTOK]" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-orange-300 transition duration-300">
+                    <i class="fab fa-tiktok text-2xl"></i>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100014602595454" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-orange-300 transition duration-300">
+                    <i class="fab fa-facebook text-2xl"></i>
+                </a>
             </div>
         </div>
-        <div class="text-center mt-8 text-sm text-gray-500 border-t border-gray-800 pt-4">
-            © 2025 {{$keyword->word}} - Todos los derechos reservados.
-        </div>
-    </footer>
+    </div>
+    <div class="text-center mt-8 text-sm text-gray-500 border-t border-gray-800 pt-4">
+        © 2025 {{$keyword->word}} - Todos los derechos reservados.
+    </div>
+</footer>
 
     <!-- Script para el menú hamburguesa y el dropdown -->
     <script>
