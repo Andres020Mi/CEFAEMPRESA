@@ -85,156 +85,6 @@
     </div>
 </div>
 
-<!-- Sección de Productos Carousel (con márgenes laterales ajustados y diseño mejorado) -->
-<div id="productos" class="container mx-auto py-20 px-4 md:px-8">
-    <div class="bg-gray-700 bg-opacity-50 backdrop-blur-sm rounded-xl shadow-xl p-8 md:p-12 mx-2 md:mx-8 lg:mx-16">
-        <h2 class="text-5xl md:text-6xl font-extrabold text-center text-white mb-12 relative inline-block" data-aos="fade-up">
-            Nuestros Productos
-            <span class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-32 h-1.5 bg-orange-500 rounded"></span>
-        </h2>
-        <!-- Contenedor de las 4 filas de productos -->
-        <div class="space-y-8" data-aos="fade-up" data-aos-delay="100">
-            <!-- Fila 1 -->
-            <div class="overflow-hidden">
-                <div class="flex animate-marquee whitespace-nowrap" style="--marquee-speed: 30s;">
-                    <template id="productTemplate1">
-                        <div class="flex-shrink-0 w-48 md:w-64 mx-3 md:mx-4">
-                            <img src="" alt="" class="w-full h-40 md:h-48 object-cover rounded-lg shadow-md product-image">
-                            <p class="text-white text-base md:text-lg font-semibold text-center mt-2 product-name capitalize"></p>
-                        </div>
-                    </template>
-                    <div id="marqueeContainer1" class="flex"></div>
-                </div>
-            </div>
-            <!-- Fila 2 -->
-            <div class="overflow-hidden">
-                <div class="flex animate-marquee-reverse whitespace-nowrap" style="--marquee-speed: 28s;">
-                    <template id="productTemplate2">
-                        <div class="flex-shrink-0 w-48 md:w-64 mx-3 md:mx-4">
-                            <img src="" alt="" class="w-full h-40 md:h-48 object-cover rounded-lg shadow-md product-image">
-                            <p class="text-white text-base md:text-lg font-semibold text-center mt-2 product-name capitalize"></p>
-                        </div>
-                    </template>
-                    <div id="marqueeContainer2" class="flex"></div>
-                </div>
-            </div>
-            <!-- Fila 3 -->
-            <div class="overflow-hidden">
-                <div class="flex animate-marquee whitespace-nowrap" style="--marquee-speed: 32s;">
-                    <template id="productTemplate3">
-                        <div class="flex-shrink-0 w-48 md:w-64 mx-3 md:mx-4">
-                            <img src="" alt="" class="w-full h-40 md:h-48 object-cover rounded-lg shadow-md product-image">
-                            <p class="text-white text-base md:text-lg font-semibold text-center mt-2 product-name capitalize"></p>
-                        </div>
-                    </template>
-                    <div id="marqueeContainer3" class="flex"></div>
-                </div>
-            </div>
-            <!-- Fila 4 -->
-            <div class="overflow-hidden">
-                <div class="flex animate-marquee-reverse whitespace-nowrap" style="--marquee-speed: 26s;">
-                    <template id="productTemplate4">
-                        <div class="flex-shrink-0 w-48 md:w-64 mx-3 md:mx-4">
-                            <img src="" alt="" class="w-full h-40 md:h-48 object-cover rounded-lg shadow-md product-image">
-                            <p class="text-white text-base md:text-lg font-semibold text-center mt-2 product-name capitalize"></p>
-                        </div>
-                    </template>
-                    <div id="marqueeContainer4" class="flex"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Estilos para la animación de marquee -->
-<style>
-    /* Animación de izquierda a derecha */
-    .animate-marquee {
-        animation: marquee var(--marquee-speed) linear infinite;
-    }
-
-    @keyframes marquee {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(-50%);
-        }
-    }
-
-    /* Animación de derecha a izquierda para alternar dirección */
-    .animate-marquee-reverse {
-        animation: marquee-reverse var(--marquee-speed) linear infinite;
-    }
-
-    @keyframes marquee-reverse {
-        0% {
-            transform: translateX(-50%);
-        }
-        100% {
-            transform: translateX(0);
-        }
-    }
-
-    /* Pausar la animación al pasar el mouse */
-    .animate-marquee:hover,
-    .animate-marquee-reverse:hover {
-        animation-play-state: paused;
-    }
-
-    /* Ajustes para mejor diseño */
-    .container {
-        max-width: 100%;
-    }
-
-    @media (min-width: 1024px) {
-        .container {
-            max-width: 90%;
-        }
-    }
-</style>
-
-<!-- JavaScript para generar y duplicar imágenes dinámicamente -->
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const products = [
-            { name: "aguacate", image: "{{ asset('img/pruebas/productos/aguacate.jpeg') }}" },
-            { name: "huevo", image: "{{ asset('img/pruebas/productos/huevo.jpeg') }}" },
-            { name: "leche", image: "{{ asset('img/pruebas/productos/leche.jpeg') }}" },
-            { name: "lechuga", image: "{{ asset('img/pruebas/productos/lechuga.png') }}" },
-            { name: "mango", image: "{{ asset('img/pruebas/productos/mango.jpeg') }}" },
-            { name: "miel", image: "{{ asset('img/pruebas/productos/miel.jpeg') }}" },
-            { name: "pan", image: "{{ asset('img/pruebas/productos/pan.jpeg') }}" },
-            { name: "queso", image: "{{ asset('img/pruebas/productos/queso.jpeg') }}" },
-            { name: "yogur", image: "{{ asset('img/pruebas/productos/yogur.jpeg') }}" },
-        ];
-
-        // Función para llenar cada fila
-        const fillMarquee = (containerId, templateId) => {
-            const marqueeContainer = document.getElementById(containerId);
-            const template = document.getElementById(templateId);
-
-            // Duplicar las imágenes 4 veces por fila para un efecto fluido
-            for (let i = 0; i < 4; i++) {
-                products.forEach(product => {
-                    const clone = template.content.cloneNode(true);
-                    const img = clone.querySelector('.product-image');
-                    const name = clone.querySelector('.product-name');
-                    img.src = product.image;
-                    img.alt = product.name;
-                    name.textContent = product.name;
-                    marqueeContainer.appendChild(clone);
-                });
-            }
-        };
-
-        // Llenar las 4 filas
-        fillMarquee('marqueeContainer1', 'productTemplate1');
-        fillMarquee('marqueeContainer2', 'productTemplate2');
-        fillMarquee('marqueeContainer3', 'productTemplate3');
-        fillMarquee('marqueeContainer4', 'productTemplate4');
-    });
-</script>
 
 <!-- Sección de servicios (con márgenes laterales en móviles) -->
 <div id="servicios" class="container mx-auto py-16 px-4 md:px-0">
@@ -438,6 +288,39 @@
                 <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Gestión" class="w-full h-48 object-cover rounded-lg mb-4">
                 <h3 class="text-2xl font-semibold text-white mb-2">Gestión</h3>
                 <p class="text-gray-300">Gestión Eficiente de Resultados</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Sección de Testimonios (Lo que dicen sobre nosotros) -->
+<div id="testimonios" class="container mx-auto py-20 px-4 md:px-8">
+    <div class="bg-gray-800 bg-opacity-80 backdrop-blur-md rounded-xl shadow-2xl p-8 md:p-12 mx-4 md:mx-16">
+        <!-- Título Principal -->
+        <h2 class="text-5xl md:text-6xl font-extrabold text-center text-white mb-12 relative inline-block" data-aos="fade-up">
+            Lo que dicen sobre nosotros
+            <span class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-32 h-1.5 bg-orange-500 rounded"></span>
+        </h2>
+        <!-- Contenedor de los testimonios -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="100">
+            <!-- Testimonio 1 -->
+            <div class="bg-gray-700 rounded-lg shadow-lg p-6 flex flex-col items-center text-center">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Persona 1" class="w-24 h-24 rounded-full object-cover mb-4">
+                <p class="text-white text-base italic mb-4">"Los productos de CEFAEMPRESA son de una calidad increíble, especialmente sus frutas frescas. Siempre compro aquí para mi familia."</p>
+                <p class="text-orange-400 text-lg font-semibold">Juan Pérez</p>
+            </div>
+            <!-- Testimonio 2 -->
+            <div class="bg-gray-700 rounded-lg shadow-lg p-6 flex flex-col items-center text-center">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Persona 2" class="w-24 h-24 rounded-full object-cover mb-4">
+                <p class="text-white text-base italic mb-4">"Me encanta la miel natural de CEFAEMPRESA. Es un producto que no falta en mi hogar, y el servicio siempre es excelente."</p>
+                <p class="text-orange-400 text-lg font-semibold">María Gómez</p>
+            </div>
+            <!-- Testimonio 3 -->
+            <div class="bg-gray-700 rounded-lg shadow-lg p-6 flex flex-col items-center text-center">
+                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Persona 3" class="w-24 h-24 rounded-full object-cover mb-4">
+                <p class="text-white text-base italic mb-4">"El queso artesanal de CEFAEMPRESA es el mejor que he probado. Además, apoyar a productores locales me hace sentir muy bien."</p>
+                <p class="text-orange-400 text-lg font-semibold">Carlos Rodríguez</p>
             </div>
         </div>
     </div>

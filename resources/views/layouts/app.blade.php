@@ -70,7 +70,8 @@
                         </div>
                     </div>
                 @else
-                    <a href="{{ route('login') }}" class="ml-auto text-lg font-semibold text-white bg-orange-400 hover:bg-orange-500 transition duration-300 block md:inline py-2 px-4 rounded-full md:py-1">Log in</a>
+                <a href="{{ route('login') }}" class="ml-auto text-lg font-semibold text-orange-300 border border-orange-300 hover:bg-orange-300 hover:text-gray-900 transition duration-300 block md:inline py-2 px-4 rounded-full md:py-1">Log in</a>
+
                 @endauth
             </div>
         </div>
