@@ -1,5 +1,6 @@
 {
     "Tests": true,
     "Users": true,
-    "Nosotros": true
+    "Nosotros": true,
+    "Analisis": true
 }

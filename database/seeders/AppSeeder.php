@@ -73,6 +73,12 @@ class AppSeeder extends Seeder
                 'description' => 'Encuentra nuestra sede y puntos de atención en el mapa.',
                 'icon_class' => 'fa-solid fa-map-location-dot',
                 'url' => '/ubicacion',
+            ],
+            [
+                'title' => 'Análisis de Datos',
+                'description' => 'Explora estadísticas, reportes y visualizaciones generadas a partir de todas las aplicaciones.',
+                'icon_class' => 'fa-solid fa-chart-line',
+                'url' => '/analisis',
             ]
         ];
         
