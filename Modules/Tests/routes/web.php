@@ -11,3 +11,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 Route::get('/tests', function () {
     return "Hola tests";
 });
+
+Route::get('/tests2', function () {
+    return "Hola tests 2";
+});
