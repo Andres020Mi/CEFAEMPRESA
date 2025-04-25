@@ -6,4 +6,4 @@ use Modules\Analisis\Http\Controllers\AnalisisController;
 
 
 
-Route::get('/analisis', [AnalisisController::class,"index"])->names('analisis.index');
+Route::get('/analisis', [AnalisisController::class,"index"])->name('analisis.index');
