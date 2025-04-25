@@ -7,3 +7,8 @@ use Modules\Analisis\Http\Controllers\AnalisisController;
 
 
 Route::get('/analisis', [AnalisisController::class,"index"])->name('analisis.index');
+
+
+Route::get("/analisis/test",function (){
+    return "test analisis"; 
+});
