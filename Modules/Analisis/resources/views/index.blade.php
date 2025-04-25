@@ -642,42 +642,8 @@
         </div>
     </div>
 
-    <!-- Componente 12: Gráfico de Sankey - Flujo de Recursos -->
-    <div class="mb-12">
-        <h3 class="text-3xl font-bold mb-6 text-white relative inline-block" data-aos="fade-up">
-            Flujo de Recursos
-            <span class="absolute -bottom-2 left-0 w-24 h-1 bg-orange-500 rounded"></span>
-        </h3>
-        <div class="bg-gray-800 p-6 rounded-lg shadow-xl" data-aos="fade-right">
-            <h4 class="text-xl font-semibold mb-4 text-white">Insumos a Productos</h4>
-            <div class="chart-container" style="position: relative; height: 300px; width: 100%;">
-                <canvas id="sankeyChart"></canvas>
-            </div>
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-sankey@0.2.0/dist/chartjs-chart-sankey.min.js"></script>
-    <script>
-        new Chart(document.getElementById('sankeyChart'), {
-            type: 'sankey',
-            data: {
-                datasets: [{
-                    data: [
-                        { from: 'Semillas', to: 'Café', flow: 200 },
-                        { from: 'Semillas', to: 'Cacao', flow: 150 },
-                        { from: 'Fertilizantes', to: 'Café', flow: 100 },
-                        { from: 'Fertilizantes', to: 'Maíz', flow: 200 },
-                        { from: 'Agua', to: 'Café', flow: 300 },
-                        { from: 'Agua', to: 'Maíz', flow: 250 }
-                    ],
-                    colorFrom: '#F97316',
-                    colorTo: '#34D399'
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false
-            }
-        });
-    </script>
+ 
 </div>
+
+
 @endsection
