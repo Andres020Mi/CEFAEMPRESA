@@ -8,6 +8,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
 });
 
 
+Route::get('/pagina1', function () {
+    return view("tests::pagina1");
+});
+
 Route::get('/tests', function () {
     return "Hola tests";
 });
