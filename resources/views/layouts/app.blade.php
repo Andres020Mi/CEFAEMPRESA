@@ -206,10 +206,10 @@
                     <div class="flex flex-col items-start space-y-4">
                         <!-- Imagen RadioCefa -->
                         <img src="{{ asset('img/RadioCefa.jpg') }}" alt="Logo Radio Cefa" width="140"
-                            class="rounded-lg border-2 border-orange-300 transform hover:scale-105 transition duration-300">
+                            class="rounded-lg transform hover:scale-105 transition duration-300">
 
                         <!-- Redes sociales Radio Cefa -->
-                        <div class="flex space-x-6">
+                        <div class="flex space-x-5">
                             <a href="https://youtube.com/@radiocefa?si=EcQJHomqlGf2uMk2" target="_blank"
                                 rel="noopener noreferrer"class="text-gray-400 hover:text-orange-300 transition duration-300">
                                 <i class="fab fa-youtube text-2xl"></i>
